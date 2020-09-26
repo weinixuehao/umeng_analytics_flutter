@@ -65,7 +65,7 @@ public class UmengAnalyticsFlutterPlugin implements MethodCallHandler {
         UMConfigure.setEncryptEnabled((Boolean) call.argument("encrypt"));
 
         // Session间隔时长,单位是毫秒，默认Session间隔时间是30秒,一般情况下不用修改此值
-        MobclickAgent.setSessionContinueMillis((Long) call.argument("interval"));
+        MobclickAgent.setSessionContinueMillis(30000);
 
         // true表示打开错误统计功能，false表示关闭 默认为打开
         MobclickAgent.setCatchUncaughtExceptions((Boolean) call.argument("reportCrash"));
